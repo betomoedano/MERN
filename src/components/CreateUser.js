@@ -10,7 +10,7 @@ export default function CreateUser() {
     const [email, setEmail] = useState("");
 
     const saveUser = async () => {
-        await axios.post("http://localhost:3001/post",
+        await axios.post("https://mern-betomoedano.herokuapp.com/post",
         {
             firstName: firstName,
             lastName: lastName,

@@ -13,7 +13,7 @@ function App() {
   }, [])
 
   const fetchData = async () => {
-    return  await axios.get("http://localhost:3001/read")
+    return  await axios.get("https://mern-betomoedano.herokuapp.com/read")
     .then((res) => {
       //console.log(res.data);
       setProfiles(res.data);
@@ -22,14 +22,14 @@ function App() {
   }
 
   const updatePicture = async (id) => {
-    axios.put("http://localhost:3001/update", {
+    axios.put("https://mern-betomoedano.herokuapp.com/update", {
       id: id,
       newProfilePicture: newProfilePicture,
     });
   };
 
   const deleteUser = async (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`);
+    axios.delete(`https://mern-betomoedano.herokuapp.com/delete/${id}`);
   }
   return (
     <div className="App">
