@@ -21,19 +21,26 @@ export default function CreateUser() {
         );
     }
     return(
-        <form>
-            <h2>Create User</h2>
-            <label>First Name</label><br/>
-            <input placeholder="First Name" onChange={(event) => {setFisrtName(event.target.value)}}></input><br/>
-            <label>Last Name</label><br/>
-            <input placeholder="Last Name" onChange={(event) => {setLastName(event.target.value)}}></input><br/>
-            <label>Profile Picture</label><br/>
-            <input placeholder="Sting only" onChange={(event) => {setProfilePicture(event.target.value)}}></input><br/>
-            <label>Status</label><br/>
-            <input placeholder="Status" onChange={(event) => {setStatus(event.target.value)}}></input><br/>
-            <label>Email</label><br/>
-            <input placeholder="Email" onChange={(event) => {setEmail(event.target.value)}}></input><br/><br/>
-            <button onClick={saveUser}>Save</button>
-        </form>
+        <div className="border-2 border-gray-900 border-opacity-30 rounded-md py-2 px-4 dark:border-gray-50 dark:border-opacity-40">
+            <form className="">
+                <h2 className="dark:text-white text-center w-full font-bold text-xl  dark:text-gray-50">Create User</h2>
+                <label className="font-semibold text-md text-gray-900 text-opacity-60 inline-block mb-1 dark:text-gray-50">First Name</label><br/>
+                <input className="mb-4 w-full py-2 rounded-md pl-2 bg-transparent border-2 border-gray-900 border-opacity-20 " placeholder="First Name" onChange={(event) => {setFisrtName(event.target.value)}}></input><br/>
+                <label className="font-semibold text-md text-gray-900 text-opacity-60 inline-block mb-1 dark:text-gray-50">Last Name</label><br/>
+                <input className="mb-4 w-full py-2 rounded-md pl-2 bg-transparent border-2 border-gray-900 border-opacity-20 " placeholder="Last Name" onChange={(event) => {setLastName(event.target.value)}}></input><br/>
+                <label className="font-semibold text-md text-gray-900 text-opacity-60 inline-block mb-1 dark:text-gray-50">Profile Picture</label><br/>
+                <input className="mb-4 w-full py-2 rounded-md pl-2 bg-transparent border-2 border-gray-900 border-opacity-20 " placeholder="Image link only" onChange={(event) => {setProfilePicture(event.target.value)}}></input><br/>
+                <label className="font-semibold text-md text-gray-900 text-opacity-60 inline-block mb-1 dark:text-gray-50">Status</label><br/>
+                <input className="mb-4 w-full py-2 rounded-md pl-2 bg-transparent border-2 border-gray-900 border-opacity-20 " placeholder="Status" onChange={(event) => {setStatus(event.target.value)}}></input><br/>
+                <label className="font-semibold text-md text-gray-900 text-opacity-60 inline-block mb-1 dark:text-gray-50">Email</label><br/>
+                <input className="mb-4 w-full py-2 rounded-md pl-2 bg-transparent border-2 border-gray-900 border-opacity-20" placeholder="Email" onChange={(event) => {setEmail(event.target.value)}}></input><br/><br/>
+                <div className="rounded-md bg-gray-800 w-full py-2 dark:bg-yellow-300 mb-4">
+                    <button className="flex items-center justify-center w-full" onClick={saveUser}>
+                        <span className=" font-semibold text-base text-gray-50 dark:text-gray-800">Save User</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
     )
 }

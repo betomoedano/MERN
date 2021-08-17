@@ -3,6 +3,9 @@ import axios from "axios";
 import CreateUser from "./components/CreateUser"
 import {useEffect, useState} from "react";
 
+import Header from './components/Header';
+import Logos from './components/Logos';
+
 function App() {
 
   const [profiles, setProfiles] = useState([]); 
@@ -32,9 +35,13 @@ function App() {
     axios.delete(`https://mern-betomoedano.herokuapp.com/delete/${id}`);
   }
   return (
-    <div className="App">
-      <h1>Hello</h1>
-      <p>this is a MERN test</p>
+    <div className="bg-gray-50 dark:bg-gray-800 min-h-screen h-full overflow-y-scroll px-2">
+      <Header></Header>
+      <div className="mb-4">
+        <h1 className="pt-6 mb-4 text-4xl font-bold dark:text-gray-50">Welcome to my little fullstack project</h1>
+        <p className="font-semibold text-lg dark:text-gray-50">This is a App allows you to make CRUD operations using the MERN stack </p>
+      </div>
+      <Logos/>
       <CreateUser/>
       {
         profiles.map((user, userID) => (
