@@ -10,6 +10,8 @@ module.exports = {
       gray: color.gray,
       blue: color.sky,
       yellow: color.amber,
+      red:color.red,
+
     }
   },
   variants: {
