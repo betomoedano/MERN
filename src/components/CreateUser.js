@@ -25,7 +25,7 @@ export default function CreateUser() {
        
     }
     return(
-        <div className="border-2 border-gray-900 border-opacity-30 rounded-md py-2 px-4 dark:border-gray-50 dark:border-opacity-40 mb-4">
+        <div className=" border-2 border-gray-900 border-opacity-30 rounded-md py-2 px-4 dark:border-gray-50 dark:border-opacity-40 mb-4">
             <form className="">
                 <h2 className="dark:text-white text-center w-full font-bold text-xl  dark:text-gray-50">Create User</h2>
                 <label className="font-semibold text-md text-gray-900 text-opacity-60 inline-block mb-1 dark:text-gray-50">First Name</label><br/>
